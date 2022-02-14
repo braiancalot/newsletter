@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --body-bg-color: #121214;
+    --text-color: #E1E1E6;
+    --title-color: #04D361;
+    --form-color: #A8A8A8;
+    --bg-button-color: #8257e5;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--body-bg-color);
+}
+
+header {
+    margin: 40px 40px 150px;
+    min-width: 200px;
+}
+
+main {
+    margin: 40px;
+    height: 400px;
+}
+
+label {
+    font-family: Spartan;
+    color: var(--form-color);
+    font-weight: 700;
+    font-size: 16px;
+    margin: 100px 0;
+}
+
+input {
+    width: 100%; 
+    height: 55px;
+    border: none;
+    border-left: 6px solid #04D361;
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+input:focus{
+    border: 2px solid #04D361;
+    border-left: 6px solid #04D361;
+    outline: none;
+}
+
+button {
+    width: 56px;
+    height: auto;
+    border: none;
+    background-color: var(--bg-button-color);
+    cursor: pointer;
+
+}
+
+button:hover {
+    background-color: #9377d6;
+}
+
+button:active {
+    background-color: var(--bg-button-color);
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    margin-top: 130px;
+}
+
+span {
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+    font-family: Spartan;
+    font-weight: 700;
+    color: var(--bg-button-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container {
+    width: 65%;
+    min-width: 400px;
+}
+
+.logo {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.text {
+    line-height: 1;
+    margin: 80px 0;
+}
+
+.text1{
+    color: #04D361;
+    font-family: Work sans;
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 16px;
+    
+}
+
+.text2{ 
+    color: var(--text-color);
+    font-family: Spartan;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.text3{
+    color: var(--text-color);
+    font-family: Spartan;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.email-box{
+    display: flex;
+    width: 50%;
+    box-sizing: border-box;    
+    position: absolute;
+    margin: 10px 0;
+    box-shadow: 4px 10px 15px 1px rgb(0, 0, 0, 0.5);
+}
+
+.img-aside {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Modal */
+.modal-container {
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, .6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;    
+    align-items: center;
+}
+
+.modal-info {
+    background: #121214;
+    border: 8px solid #8257e5;
+    padding: 30px;
+    width: 30%;
+    height: 22%;
+    min-width: 380px;
+    min-height: 200px;
+    box-shadow: 0 0 0 10px #121214;
+    position: relative;
+    animation: modal-animation 0.3s;
+    
+}
+
+@keyframes modal-animation {
+    0% {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.text2.textModal {
+    color: #8257e5;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.fecharModal {
+    position: absolute;
+    top: -28px;
+    right: -28px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 10px solid #121214;
+    background-color: #121214;
+    color: #8257e5;
+    font-size: 24px;
+    box-shadow: 5px 5px 10px #121214;
+}
+
+.fecharModal:hover {
+    background-color: #1d1d20;
+    border: #1d1d20;
+}
+
+.fecharModal:active {
+    background-color: #121214;
+    border: #121214;
+}
+
+.mostrar {
+    display: flex;
+}
+
+@media (max-width: 600px){
+    body {
+        width: 100vw;
+        height: 100vh;
+        min-width: 400px;
+    }
+    
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    main {
+        margin: 0 30px;
+        height: 450px;
+    }
+
+    aside {
+        display: none;
+    }
+
+    .email-box {
+        min-width: 340px;
+        width: calc(100% - 60px)
+    }
+
+    header {
+        margin: 30px 30px 40px;
+    }
+
+    .logo {
+        margin: 0 auto;
+    }
+
+    .modal-container{
+        height: 100%;
+        width: 100%;
+    }
+
+    .modal-info {
+        background: #121214;
+        border: 8px solid #8257e5;
+        padding: 30px;
+        width: 30%;
+        min-width: 350px;
+        height: 30%;
+        min-height: 200px;
+        box-shadow: 0 0 0 10px #121214;
+        position: relative;
+    }
+
+    .text2 {
+        line-height: 1.5;
+        margin-top: 10px;
+    }
+}
